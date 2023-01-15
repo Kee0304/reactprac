@@ -2,6 +2,7 @@ import React, {useReducer, useMemo} from 'react';
 import UserList from './components/UserList';
 import CreateUser from './components/CreateUser';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -89,6 +90,7 @@ function App() {
         />
         <div>활성된 사용자 수 : {count}</div>
       </UserDispatch.Provider>
+      <Link to={'/'}>뒤로가기</Link>
     </>
   );
 }

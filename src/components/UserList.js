@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { UserDispatch } from '../App';
+import { Link } from 'react-router-dom';
 
 const User = React.memo(function User({ user }) {
   const dispatch = useContext(UserDispatch)
@@ -24,6 +25,7 @@ const User = React.memo(function User({ user }) {
       }}>
         삭제
       </button>
+      <Link to={`/profile/${user.username}`}>프로필로</Link>
     </div>
   );
 });

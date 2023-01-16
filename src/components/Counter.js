@@ -1,4 +1,6 @@
 import React, { useReducer } from 'react';
+import { useSearchParams } from "react-router-dom"
+
 
 function reducer (state, actions) {
   switch (actions.type) {
@@ -15,13 +17,18 @@ function reducer (state, actions) {
 
 
 function Counter() {
+  const [searchParams] = useSearchParams();
+
   const [number, dispatch] = useReducer(reducer, 0)
+
 
   const whenIncrease = () => {
     dispatch({ type:"INCREMENT" })
+    console.log(searchParams)
   }
   const whenDecrease = () => {
     dispatch({ type:"DECREMENT" })
+    console.log(searchParams)
   }
 
   return (
@@ -29,6 +36,7 @@ function Counter() {
       <h1>{ number }</h1>
       <button onClick={whenIncrease}>+1</button>
       <button onClick={whenDecrease}>-1</button>
+      <h2>{ searchParams }</h2>
     </div>
   );
 }

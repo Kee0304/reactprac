@@ -9,6 +9,8 @@ import Root from "./routes/root";
 import Counter from "./routes/Counter"
 import App from "./App"
 import Profile from "./components/Profile";
+import QueryTest from "./components/QueryTest";
+
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     element: <Root />,
   },
   {
-    path: "/Counter/",
+    path: "/Counter",
     element: <Counter />
   },
   {
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/profile/:username",
     element: <Profile />
+  },
+  {
+    path: "/querytest",
+    element: <QueryTest />
   }
 ]);
 

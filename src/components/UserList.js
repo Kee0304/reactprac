@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserDispatch } from '../App';
+import { UserDispatch } from './App';
 import { Link } from 'react-router-dom';
 
 const User = React.memo(function User({ user }) {

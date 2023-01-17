@@ -1,7 +1,6 @@
 import React, {useReducer, useMemo} from 'react';
-import UserList from './components/UserList';
-import CreateUser from './components/CreateUser';
-import './App.css';
+import UserList from './UserList';
+import CreateUser from './CreateUser';
 import { Link } from 'react-router-dom';
 
 

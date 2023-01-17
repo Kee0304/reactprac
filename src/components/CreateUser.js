@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import { UserDispatch } from '../App';
+import { UserDispatch } from './App';
 import useInputs from '../hooks/useInputs';
 
 const CreateUser = () => {
